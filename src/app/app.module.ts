@@ -2,18 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { AddItemComponent } from './shopping-list/components/add-item/add-item.component';
-import { ListComponent } from './shopping-list/components/list/list.component';
+import { ShoppingListModule } from './shopping-list/shopping-list.module';
 
 @NgModule({
   declarations: [
-    
     AppComponent,
-    AddItemComponent,
-    ListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ShoppingListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

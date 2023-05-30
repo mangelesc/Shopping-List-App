@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser'
 import { MainPageComponent } from './pages/main-page.component';
+import { ListComponent } from './components/list/list.component';
+import { AddItemComponent } from './components/add-item/add-item.component';
 
 
 @NgModule({
-  imports: [],
+  imports: [BrowserModule],
   exports: [
     MainPageComponent
   ],
   declarations: [
-    MainPageComponent
+    MainPageComponent,
+    ListComponent,
+    AddItemComponent
   ],
-  providers: [],
 })
 export class ShoppingListModule { }

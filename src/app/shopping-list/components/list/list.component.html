@@ -1,1 +1,11 @@
-<p>list works!</p>
+<h2>My Shopping List</h2>
+<ul>
+  <li *ngFor = 
+      "let item of shoppingList;
+      let i = index" >
+      <!-- <span> {{ i+1 }} </span> -->
+      <span> {{ item.name }} </span>
+      <span> {{ item.quantity }} </span>
+      <button (click)="onDeleteItem(item.id)"> x </button>
+  </li>
+</ul>
