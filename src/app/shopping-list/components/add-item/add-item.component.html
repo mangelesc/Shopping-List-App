@@ -1,1 +1,43 @@
-<p>add-item works!</p>
+<h4>Add item to my shoping list</h4>
+
+<form class="row" (ngSubmit)="emitItem()">
+
+  <label for="name">Name</label>
+  <input
+    type="text"
+    [(ngModel)]="item.name"
+    name="name"
+    placeholder="Name">
+
+  <label for="quantity">Quantity: </label>
+  <input
+    type="number"
+    [(ngModel)]="item.quantity"
+    name="quantity"
+    placeholder="Quantity">
+
+  <label for="">Grocery categories: </label>
+  <select 
+    [(ngModel)]="item.type"
+    name="type" 
+    id="type"
+    >
+    <option value="">Fruits and Vegetables</option>
+    <option value="">Dairy Products</option>
+    <option value="">Meat and Fish</option>
+    <option value="">Bakery</option>
+    <option value="">Cereals and Grain Products</option>
+    <option value="">Canned and Packaged Foods</option>
+    <option value="">Pantry Staples</option>
+    <option value="">Beverages</option>
+    <option value="">Cleaning Supplies</option>
+    <option value="">Personal Care Items</option>
+    <option value="">Others</option>
+  </select>
+  
+  <button type="submit" >
+    Add
+  </button>
+
+
+</form>

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { v4 as uuid } from 'uuid';
 
 import { Item } from '../interfaces/item.interfaz';
 
@@ -9,19 +10,19 @@ import { Item } from '../interfaces/item.interfaz';
 export class ShoppingListService {
   private _shoppingList: Item[] = [
     {
-      id: '1',
+      id: uuid(),
       name: 'Apples',
       type: 'fruit',
       quantity: 5 
     },
     {
-      id: '2',
+      id: uuid(),
       name: 'Bananas',
       type: 'fruit',
       quantity: 5
     },
     {
-      id: '3',
+      id: uuid(),
       name: 'Milk',
       type: 'dairy',
       quantity: 3
@@ -33,7 +34,8 @@ export class ShoppingListService {
   }
 
   addItem ( item: Item ): void {
-    this._shoppingList.push(item);
+    const newItem: Item = {id: uuid() , ...item }
+    this._shoppingList.push(newItem);
   }
 
   dropItemById ( id:string ): void {

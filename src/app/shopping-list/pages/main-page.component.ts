@@ -19,4 +19,8 @@ export class MainPageComponent {
   onDeleteItem (id:string): void {
     this.ShoppingListService.dropItemById(id);
   }
+
+  onNewItem( item: Item ): void {
+    this.ShoppingListService.addItem( item );
+  }
 }

@@ -2,3 +2,7 @@
   [shoppingList]="shoppingList"
   (onDelete)="onDeleteItem($event)">
 </app-shopping-list-list>
+
+<app-shopping-list-add-item 
+  (onNewItem)="onNewItem($event)">
+</app-shopping-list-add-item>
