@@ -1,0 +1,12 @@
+
+.tittleh2{
+  background-color: var(--color2);
+  padding: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main{
+  padding: 1.6em 1.3em;
+}

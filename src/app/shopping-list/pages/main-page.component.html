@@ -1,9 +1,15 @@
-<app-shopping-list-list 
-  [shoppingList]="shoppingList"
-  (onDelete)="onDeleteItem($event)"
-  (onChangeQuantity)="onChangeQuantityItem($event)">
-</app-shopping-list-list>
+<div class="tittleh2">
+  <h2>My Shopping List</h2>
+</div>
 
-<app-shopping-list-add-item 
-  (onNewItem)="onNewItem($event)">
-</app-shopping-list-add-item>
+<div class="main">
+  <app-shopping-list-list 
+    [shoppingList]="shoppingList"
+    (onDelete)="onDeleteItem($event)"
+    (onChangeQuantity)="onChangeQuantityItem($event)">
+  </app-shopping-list-list>
+
+  <app-shopping-list-add-item 
+    (onNewItem)="onNewItem($event)">
+  </app-shopping-list-add-item>
+</div>

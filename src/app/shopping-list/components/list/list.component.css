@@ -1,0 +1,43 @@
+.list-div {
+  padding-bottom: 2em;
+}
+
+.list-div > ul > li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #f2f2f2;
+  padding: 1em;
+}
+
+.item-name{
+  min-width: 50%;
+}
+
+.item-quantity-div{
+  display: flex;
+  min-width: 15%;
+  align-items: center;
+}
+
+.item-quantity-div > div {
+  padding: 0 0.5em;
+}
+
+.item-quantity-div > button {
+  padding: 0 0.2em;
+}
+
+.delete-button{
+  padding: 0.2em 0.4em;
+  min-width: 10%;
+  font-weight: bolder;
+  color: white;
+  background-color: var(--color1);
+  border: none;
+  border-radius: 15px;
+}
+
+.even{
+  background-color: var(--color3);
+}

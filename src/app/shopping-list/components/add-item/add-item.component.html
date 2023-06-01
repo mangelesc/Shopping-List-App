@@ -1,41 +1,49 @@
-<h4>Add item to my shoping list</h4>
+<h4>Add new item to my shoping list</h4>
 
-<form class="row" (ngSubmit)="emitItem()">
+<form class="add-form" (ngSubmit)="emitItem()">
 
-  <label for="name">Name</label>
-  <input
+  <div class="form-section">
+    <label for="name">Name: </label>
+    <input
     type="text"
     [(ngModel)]="item.name"
     name="name"
     placeholder="Name">
-
-  <label for="quantity">Quantity: </label>
-  <input
-    type="number"
-    [(ngModel)]="item.quantity"
-    name="quantity"
-    placeholder="Quantity">
-
-  <label for="">Grocery categories: </label>
-  <select 
-    [(ngModel)]="item.type"
-    name="type" 
-    id="type"
-    >
-    <option value="Fruits and Vegetables">Fruits and Vegetables</option>
-    <option value="Dairy Products">Dairy Products</option>
-    <option value="Meat and Fish">Meat and Fish</option>
-    <option value="Bakery">Bakery</option>
-    <option value="Cereals and Grain Products">Cereals and Grain Products</option>
-    <option value="Canned and Packaged Foods">Canned and Packaged Foods</option>
-    <option value="Pantry Staples">Pantry Staples</option>
-    <option value="Beverages">Beverages</option>
-    <option value="Cleaning Supplies">Cleaning Supplies</option>
-    <option value="Personal Care Items">Personal Care Items</option>
-    <option value="Others" selected >Others</option>
-  </select>
+  </div>
   
-  <button type="submit" >
+
+  <div class="form-section">
+    <label for="quantity">Quantity: </label>
+    <input
+      type="number"
+      [(ngModel)]="item.quantity"
+      name="quantity"
+      placeholder="Quantity"
+      min="1"
+      required>
+      
+  </div>
+
+  <div class="form-section">
+    <label for="">Grocery categories: </label>
+    <select 
+      [(ngModel)]="item.type"
+      name="type" 
+      id="type"
+      required
+      >
+      <option value="Fruits and Vegetables">Fruits and Vegetables</option>
+      <option value="Dairy Products">Dairy Products</option>
+      <option value="Meat and Fish">Meat and Fish</option>
+      <option value="Bakery">Bakery</option>
+      <option value="Cereals and Grain Products">Cereals and Grain Products</option>
+      <option value="Canned and Packaged Foods">Canned and Packaged Foods</option>
+      <option value="Beverages">Beverages</option>
+      <option value="Others">Others</option>
+    </select>
+  </div>
+
+  <button class="button-submit" type="submit" >
     Add
   </button>
 
