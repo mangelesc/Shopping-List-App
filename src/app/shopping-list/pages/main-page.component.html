@@ -1,6 +1,7 @@
 <app-shopping-list-list 
   [shoppingList]="shoppingList"
-  (onDelete)="onDeleteItem($event)">
+  (onDelete)="onDeleteItem($event)"
+  (onChangeQuantity)="onChangeQuantityItem($event)">
 </app-shopping-list-list>
 
 <app-shopping-list-add-item 

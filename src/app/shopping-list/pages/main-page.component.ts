@@ -23,4 +23,10 @@ export class MainPageComponent {
   onNewItem( item: Item ): void {
     this.ShoppingListService.addItem( item );
   }
+
+  onChangeQuantityItem (item: [number, string?]):void {
+    const value:number = item[0];
+    const id:string = item[1] || '';
+    this.ShoppingListService.increaseQuantity(value, id);
+  }
 }

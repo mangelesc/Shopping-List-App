@@ -22,4 +22,12 @@ export class ListComponent {
     if ( !id ) return;
     this.onDelete.emit(id);
   }
+
+  @Output()
+  public onChangeQuantity: EventEmitter<[number, string?]> = new EventEmitter();
+
+  onChangeQuantityItem (value:number, id?:string ): void {
+    if ( !id ) return;
+    this.onChangeQuantity.emit([value, id]);
+  }
 }

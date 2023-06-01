@@ -42,7 +42,7 @@ export class ShoppingListService {
     this._shoppingList = this._shoppingList.filter( item => item.id !== id );
   }
 
-  increaseQuantity (id:string, value : number): void {
+  increaseQuantity (value : number, id:string): void {
     this._shoppingList.forEach(item => {
       if (item.id === id){
         item.quantity += value;

@@ -3,13 +3,15 @@
   <li *ngFor = 
       "let item of shoppingList;
       let i = index" >
-      <!-- <span> {{ i+1 }} </span> -->
-      <span> {{ item.name }} </span>
-      <span> {{ item.quantity }} </span>
-      <span [ngClass]="{
+      <div> {{ item.name }} </div>
+      <div>
+        <div (click)="onChangeQuantityItem(+1, item.id)">+</div>
+        <div> {{ item.quantity }} </div>
+        <div (click)="onChangeQuantityItem(-1, item.id)">-</div>
+      </div>
+      <div [ngClass]="{
         'VegFruits': item.type === 'Fruits and Vegetables'}">
-
-      </span>
+      </div>
       <button (click)="onDeleteItem(item.id)"> x </button>
   </li>
 </ul>
