@@ -7,16 +7,22 @@
   align-items: center;
   justify-content: space-between;
   border: 1px solid #f2f2f2;
-  padding: 1em;
+  padding: 1em 0.9em;
 }
 
 .item-name{
-  min-width: 50%;
+  min-width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+}
+.item-name > span{
+  padding-left: 0.5em;
 }
 
 .item-quantity-div{
   display: flex;
-  min-width: 15%;
+  min-width: 20%;
   align-items: center;
 }
 
@@ -40,4 +46,35 @@
 
 .even{
   background-color: var(--color3);
+}
+
+.img{
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-position: center center; 
+}
+.FruitsVegetables{
+  background-image: url(../../../../assets/imgs/red-pepper.png);
+}
+.DairyProducts{
+  background-image: url(../../../../assets/imgs/cheese.png);
+}
+.MeatFish{
+  background-image: url(../../../../assets/imgs/fish.png);
+}
+.Bakery{
+  background-image: url(../../../../assets/imgs/croissant.png);
+}
+.CerealsGrainProducts{
+  background-image: url(../../../../assets/imgs/sliced-bread.png);
+}
+.CannedPackagedFoods{
+  background-image: url(../../../../assets/imgs/tomato-sauce.png);
+}
+.Beverages{
+  background-image: url(../../../../assets/imgs/juice-bottle.png);
+}
+.Others{
+  background-image: url(../../../../assets/imgs/basket.png);
 }

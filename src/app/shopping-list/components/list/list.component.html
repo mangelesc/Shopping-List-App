@@ -6,7 +6,10 @@
         
         [ngClass]="{'even': isOdd}">
 
-        <div  class="item-name"> {{ item.name }} </div>
+        <div class="item-name"> 
+          <div class="img {{item.type}} "></div>
+          <span> {{ item.name }} </span>
+        </div>
 
         <div class="item-quantity-div">
           <button (click)="onChangeQuantityItem(-1, item.id)">-</button>

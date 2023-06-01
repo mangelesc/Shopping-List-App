@@ -12,20 +12,32 @@ export class ShoppingListService {
     {
       id: uuid(),
       name: 'Apples',
-      type: 'fruit',
+      type: 'FruitsVegetables',
       quantity: 5 
     },
     {
       id: uuid(),
       name: 'Bananas',
-      type: 'fruit',
+      type: 'FruitsVegetables',
       quantity: 5
     },
     {
       id: uuid(),
-      name: 'Milk',
-      type: 'dairy',
-      quantity: 3
+      name: 'Cheese',
+      type: 'DairyProducts',
+      quantity: 1
+    },
+    {
+      id: uuid(),
+      name: 'Orange Juice',
+      type: 'Beverages',
+      quantity: 2
+    },
+    {
+      id: uuid(),
+      name: 'Birthday Cake',
+      type: 'Bakery',
+      quantity: 1
     }
   ]
 
