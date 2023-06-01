@@ -41,4 +41,12 @@ export class ShoppingListService {
   dropItemById ( id:string ): void {
     this._shoppingList = this._shoppingList.filter( item => item.id !== id );
   }
+
+  increaseQuantity (id:string, value : number): void {
+    this._shoppingList.forEach(item => {
+      if (item.id === id){
+        item.quantity += value;
+      }
+    });
+  }
 }

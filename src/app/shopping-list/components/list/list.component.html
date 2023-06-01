@@ -6,6 +6,10 @@
       <!-- <span> {{ i+1 }} </span> -->
       <span> {{ item.name }} </span>
       <span> {{ item.quantity }} </span>
+      <span [ngClass]="{
+        'VegFruits': item.type === 'Fruits and Vegetables'}">
+
+      </span>
       <button (click)="onDeleteItem(item.id)"> x </button>
   </li>
 </ul>
